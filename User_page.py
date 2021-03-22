@@ -4,6 +4,9 @@ root = Tk()
 root.title("Note page")
 root.geometry("1000x500")
 
+label_1 = Label(root, text="Users", bg= "grey", font=("Helvtica", 18))
+label_1.pack()
+
 def clicked(): 
     input= Name.get()
     user_name = label(root, text = "welcome" + input)
@@ -16,7 +19,7 @@ user_name = Entry(root, font=("Helvetica",15))
 user_name.pack(pady=20)
 
 button_1 = Button(root, text="ADD", command=clicked)
-button_1.pack(pady=20)
+button_1.pack(pady=5)
 
 
 

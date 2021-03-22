@@ -20,7 +20,8 @@ variable.set(Classes[0])
 w = OptionMenu(master, variable, *Classes)
 w.pack()
 
-
+label_1 = Label(root, text="Periods", bg= "grey", font=("Helvtica", 10))
+label_1.pack()
 
 list_1 = IntVar()
 
