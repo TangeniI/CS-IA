@@ -1,32 +1,26 @@
 from tkinter import * 
 
 
-root = Tk()
-root.title("Class page")
-root.geometry("1000x500")
+def classpage(root):
 
-Classes = [
-"User 1",
-"User 2",
-"User 3"
+    Classes = [
+    "User 1",
+    "User 2",
+    "User 3"
 
-] 
+    ] 
 
-master = Tk()
+    
 
-variable = StringVar(master)
-variable.set(Classes[0]) 
+    variable = StringVar(root)
+    variable.set(Classes[0]) 
 
-w = OptionMenu(master, variable, *Classes)
-w.pack()
-
-label_1 = Label(root, text="Periods", bg= "grey", font=("Helvtica", 10))
-label_1.pack()
-
-list_1 = IntVar()
-
-user_1 = Radiobutton(root, text="Math", variable=list_1, value=1).pack()
-user_2 = Radiobutton(root, text="English", variable=list_1, value=2).pack()
+    w = OptionMenu(root, variable, *Classes)
+    w.pack()
 
 
-root.mainloop()
+
+    list_1 = IntVar()
+
+    user_1 = Radiobutton(root, text="Math", variable=list_1, value=1).pack()
+    user_2 = Radiobutton(root, text="English", variable=list_1, value=2).pack()

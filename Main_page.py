@@ -1,9 +1,5 @@
 from tkinter import *
-import About_page
-import database_page
-import Class_page
-import Note_page
-import User_page
+import About_page, Class_page, Note_page, User_page, database_page
 import time 
 import os
 
@@ -28,11 +24,13 @@ file_Main.add_command(label="Main Page", command=our_command)
 
 file_Main.add_command(label="About Page", command=About_page.aboutinfo)
 
-file_Main.add_command(label="User Page", command=our_command)
+file_Main.add_command(label="Future update", command=About_page.futureinfo)
 
-file_Main.add_command(label="Notes Page", command=our_command)
+file_Main.add_command(label="User Page", command=lambda : User_page.clicked(root))
 
-file_Main.add_command(label="Class Page", command=our_command)
+file_Main.add_command(label="Notes Page", command=lambda : Note_page.note(root))
+
+file_Main.add_command(label="Class Page", command=lambda : Class_page.classpage(root))
 
 file_Main.add_separator()
 
@@ -67,14 +65,14 @@ class App(Frame):
 
         self.after(1000, self.update_clock)
 
-root = Tk()
+root2 = Tk()
 
-app=App(root)
+app=App(root2)
 
-root.wm_title("Tkinter clock")
+root2.wm_title("Tkinter clock")
 
-root.geometry("400x400")
+root2.geometry("400x400")
 
-root.after(1000, app.update_clock)
+root2.after(1000, app.update_clock)
 
 root.mainloop()
