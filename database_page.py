@@ -4,15 +4,7 @@ from tkinter import ttk
 from openpyxl.workbook import Workbook 
 from openpyxl import load_workbook
 
-root = Tk()
-win = tk.Tk()
-win.title("User page")
-win.geometry("1000x500")
-
-
-
-v = tk.StringVar()
-def setText(word):
+def setText(word, root):
     v.set(word)
 
 a = ttk.Button(win, text="Math", command=setText("Math"))
@@ -58,8 +50,5 @@ Gather_B.pack(pady= 20)
 
 label_2 = Label(root, text="")
 label_2.pack(pady=20)
-
-win.mainloop()
-root.mainloop()
 
 #need to have pip install openpyxl installed 

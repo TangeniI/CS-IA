@@ -9,9 +9,14 @@ root.title("Welcome to TASP!")
 root.geometry("1000x500")
 
 
-#Navigation bar
+#Navigation bar 1
 def our_command():
     pass
+
+def rest_command():
+    pass
+
+
 
 nav_menu = Menu(root)
 root.config(menu=nav_menu)
@@ -35,6 +40,8 @@ file_Main.add_command(label="Class Page", command=lambda : Class_page.classpage(
 file_Main.add_separator()
 
 file_Main.add_command(label="Exit application", command=root.quit)
+
+file_Main.add_command(label="Remove current application", command=rest_command)
 
 #Title
 label_1 = Label(root, text="Welcome to TASP!", bg= "grey", font=("Helvtica", 18))
