@@ -16,4 +16,4 @@ To run this application please type
 This in :
 python main_page.py
 
-Please enjoy
+Enjoy
